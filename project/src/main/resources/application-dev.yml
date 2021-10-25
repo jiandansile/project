@@ -1,0 +1,22 @@
+spring:
+  # redis
+  redis:
+    host: 192.168.1.100
+    database: 10
+    port: 6379
+  #mysql
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/utils?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  hikari:
+    connection-timeout: 30000
+    minimum-idle: 5
+    maximum-pool-size: 30
+    idle-timeout: 30000
+    max-lifetime: 120000
+    auto-commit: true
+    pool-name: DatebookHikariCP
+    connection-test-query: SELECT 1
